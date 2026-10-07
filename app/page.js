@@ -24,6 +24,7 @@ const members=[
 {name:"Sergio",username:"@m4ndeiz",image:"/members/member-17.jpg",link:"https://t.me/m4ndeiz"},
 {name:"Harua Hirara",username:"@rramengmbul",image:"/members/member-18.jpg",link:"https://t.me/rramengmbul"},
 {name:"Jean",username:"-",image:"/members/member-19.jpg",link:"https://t.me/username"},
+{name:"Poje",username:"@crossdline3",image:"/members/member-20.jpg",link:"https://t.me/crossdline3"},
 ];
 const videos=[1,2,3].map(i=>({id:`00${i}`,src:`/videos/goofies-${i}.mp4`,poster:`/videos/poster-${i}.svg`,caption:`GOOFIES CLIP #${i}`}));
 function PersonCard({person,type}){return <a className={`polaroid ${type.toLowerCase()}`} href={person.link} target="_blank" rel="noreferrer"><div className="polaroid-photo"><img src={person.image} alt={person.name}/>{type!=="MEMBER"&&<span className="mini-badge">{type}</span>}</div><div className="polaroid-caption"><div className="polaroid-text"><strong>{person.name}</strong><span>{person.username}</span></div><ArrowUpRight className="person-arrow" size={18}/></div></a>}
