@@ -2,31 +2,27 @@
 import {useState,useEffect} from "react";
 import {ArrowDown,ArrowUpRight,Play,Pause,Volume2,Users,Crown,Shield,Sparkles,Send,Lightbulb,Heart} from "lucide-react";
 const owners=[{name:"Jonathan",username:"@pejuck",image:"/members/owner.jpg",link:"https://t.me/pejuck"}];
-const admins=[{name:"Kafka",username:"@sNSFW",image:"/members/admin-1.jpg",link:"https://t.me/sNSFW"},{name:"Naeera",username:"@nnaeerae",image:"/members/admin-2.jpg",link:"https://t.me/nnaeerae"}];
+const admins=[{name:"Kafka",username:"@sNSFW",image:"/members/admin-1.jpg",link:"https://t.me/sNSFW"},{name:"Naeera",username:"@nnaeerae",image:"/members/admin-2.jpg",link:"https://t.me/nnaeerae"},{name:"Voucaz",username:"@dGroan",image:"/members/admin-3.jpg",link:"https://t.me/dGroan"}];
 const adminSoonSlots=2;
 const members=[
-{name:"Aaron",username:"@iPelacak",image:"/members/member-1.jpg",link:"https://t.me/iPelacak"},
+{name:"T. Aaron",username:"@iPelacak",image:"/members/member-1.jpg",link:"https://t.me/iPelacak"},
 {name:"Yzekiel",username:"@Yzklie",image:"/members/member-2.jpg",link:"https://t.me/Yzklie"},
-{name:"Voucaz",username:"@dGroan",image:"/members/member-3.jpg",link:"https://t.me/dGroan"},
 {name:"Isagi",username:"@mcatlantics",image:"/members/member-4.jpg",link:"https://t.me/mcatlantics"},
 {name:"Python",username:"@pythfvck",image:"/members/member-5.jpg",link:"https://t.me/pythfvck"},
-{name:"Renjaka",username:"@politikg",image:"/members/member-6.svg",link:"https://t.me/politikg"},
+{name:"Renjaka",username:"@takttis",image:"/members/member-6.jpg",link:"https://t.me/takttis"},
 {name:"Hasbian",username:"@hazbiyan",image:"/members/member-7.jpg",link:"https://t.me/hazbiyan"},
 {name:"Jude",username:"@telanjhang",image:"/members/member-8.svg",link:"https://t.me/telanjhang"},
 {name:"Marmeiio",username:"@Zoobiecmo",image:"/members/member-9.jpg",link:"https://t.me/Zoobiecmo"},
 {name:"Cleyla",username:"@aldhokeanolan",image:"/members/member-2.svg",link:"https://t.me/aldhokeanolan"},
 {name:"Aysh",username:"@jameszhouyu",image:"/members/member-11.jpg",link:"https://t.me/jameszhouyu"},
-{name:"Jane",username:"@iPJ4nne",image:"/members/member-12.jpg",link:"https://t.me/iPJ4nne"},
-{name:"Juan",username:"@juansvn",image:"/members/member-13.jpg",link:"https://t.me/juansvn"},
-{name:"Leisha",username:"@leishaam",image:"/members/member-1.svg",link:"https://t.me/leishaam"},
-{name:"Malv",username:"@saintpoule",image:"/members/member-15.jpg",link:"https://t.me/saintpoule"},
-{name:"Mbiey",username:"@boesyhiL",image:"/members/member-16.jpg",link:"https://t.me/boesyhiL"},
-{name:"Sergio",username:"@m4ndeiz",image:"/members/member-17.jpg",link:"https://t.me/m4ndeiz"},
-{name:"Harua Hirara",username:"@rramengmbul",image:"/members/member-18.jpg",link:"https://t.me/rramengmbul"},
-{name:"Jean",username:"-",image:"/members/member-19.jpg",link:"https://t.me/username"},
 {name:"Poje",username:"@crossdline3",image:"/members/member-20.jpg",link:"https://t.me/crossdline3"},
+{name:"Sivan",username:"@iTokzyo",image:"/members/member-23.jpg",link:"https://t.me/iTokzyo"},
+{name:"Zio",username:"@jiooonih",image:"/members/member-24.jpg",link:"https://t.me/jiooonih"},
+{name:"Jupen",username:"@batiruh",image:"/members/member-25.jpg",link:"https://t.me/batiruh"},
+{name:"Aaron",username:"@Arnwsly",image:"/members/member-26.jpg",link:"https://t.me/Arnwsly"},
+
 ];
-const videos=[1,2,3].map(i=>({id:`00${i}`,src:`/videos/goofies-${i}.mp4`,poster:`/videos/poster-${i}.svg`,caption:`GOOFIES CLIP #${i}`}));
+const videos=[1,2,3,4,5,6,7].map(i=>({id:`00${i}`,src:`/videos/goofies-${i}.mp4`,poster:`/videos/poster-${i}.svg`,caption:`GOOFIES CLIP #${i}`}));
 function PersonCard({person,type}){return <a className={`polaroid ${type.toLowerCase()}`} href={person.link} target="_blank" rel="noreferrer"><div className="polaroid-photo"><img src={person.image} alt={person.name}/>{type!=="MEMBER"&&<span className="mini-badge">{type}</span>}</div><div className="polaroid-caption"><div className="polaroid-text"><strong>{person.name}</strong><span>{person.username}</span></div><ArrowUpRight className="person-arrow" size={18}/></div></a>}
 function SoonCard({label}){return <div className="polaroid soon"><div className="polaroid-photo"><span className="soon-mark">?</span></div><div className="polaroid-caption"><div className="polaroid-text"><strong>{label}</strong><span>coming soon</span></div></div></div>}
 function SectionTitle({eyebrow,title,text}){return <div className="section-title reveal"><span className="eyebrow">{eyebrow}</span><h2>{title}</h2><p>{text}</p></div>}
