@@ -20,9 +20,11 @@ const members=[
 {name:"Zio",username:"@jiooonih",image:"/members/member-24.jpg",link:"https://t.me/jiooonih"},
 {name:"Jupen",username:"@batiruh",image:"/members/member-25.jpg",link:"https://t.me/batiruh"},
 {name:"Aaron",username:"@Arnwsly",image:"/members/member-26.jpg",link:"https://t.me/Arnwsly"},
+{name:"Cassie",username:"@cielsyi",image:"/members/member-2.svg",link:"https://t.me/cielsyi"},
+{name:"Joseph",username:"@gir1kisserr",image:"/members/member-27.jpg",link:"https://t.me/gir1kisserr"},
 
 ];
-const videos=[1,2,3,4,5,6,7].map(i=>({id:`00${i}`,src:`/videos/goofies-${i}.mp4`,poster:`/videos/poster-${i}.svg`,caption:`GOOFIES CLIP #${i}`}));
+const videos=[1,2,3,4,5,6,7,8,9].map(i=>({id:`00${i}`,src:`/videos/goofies-${i}.mp4`,poster:`/videos/poster-${i}.svg`,caption:`GOOFIES CLIP #${i}`}));
 function PersonCard({person,type}){return <a className={`polaroid ${type.toLowerCase()}`} href={person.link} target="_blank" rel="noreferrer"><div className="polaroid-photo"><img src={person.image} alt={person.name}/>{type!=="MEMBER"&&<span className="mini-badge">{type}</span>}</div><div className="polaroid-caption"><div className="polaroid-text"><strong>{person.name}</strong><span>{person.username}</span></div><ArrowUpRight className="person-arrow" size={18}/></div></a>}
 function SoonCard({label}){return <div className="polaroid soon"><div className="polaroid-photo"><span className="soon-mark">?</span></div><div className="polaroid-caption"><div className="polaroid-text"><strong>{label}</strong><span>coming soon</span></div></div></div>}
 function SectionTitle({eyebrow,title,text}){return <div className="section-title reveal"><span className="eyebrow">{eyebrow}</span><h2>{title}</h2><p>{text}</p></div>}
