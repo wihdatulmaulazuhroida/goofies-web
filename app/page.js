@@ -20,7 +20,7 @@ const members=[
 {name:"Zio",username:"@jiooonih",image:"/members/member-24.jpg",link:"https://t.me/jiooonih"},
 {name:"Jupen",username:"@batiruh",image:"/members/member-25.jpg",link:"https://t.me/batiruh"},
 {name:"Aaron",username:"@Arnwsly",image:"/members/member-26.jpg",link:"https://t.me/Arnwsly"},
-{name:"Cassie",username:"@cielsyi",image:"/members/member-2.svg",link:"https://t.me/cielsyi"},
+{name:"Cassie",username:"@cielsyi",image:"/members/member-28.jpg",link:"https://t.me/cielsyi"},
 {name:"Joseph",username:"@gir1kisserr",image:"/members/member-27.jpg",link:"https://t.me/gir1kisserr"},
 
 ];
